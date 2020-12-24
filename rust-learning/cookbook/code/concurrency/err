@@ -1,0 +1,22 @@
+error[E0277]: `?` couldn't convert the error to `Error`
+  --> thread/src/main.rs:98:35
+   |
+98 |     let _ = img.save("output.png")?;
+   |                                   ^ the trait `std::convert::From<image::ImageError>` is not implemented for `Error`
+   |
+   = note: the question mark operation (`?`) implicitly performs a conversion on the error value using the `From` trait
+   = help: the following implementations were found:
+             <Error as std::convert::From<&'a str>>
+             <Error as std::convert::From<ErrorKind>>
+             <Error as std::convert::From<std::io::Error>>
+             <Error as std::convert::From<std::string::String>>
+             <Error as std::convert::From<std::sync::mpsc::RecvError>>
+   = note: required by `std::convert::From::from`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0277`.
+error: could not compile `thread`.
+
+To learn more, run the command again with --verbose.
+

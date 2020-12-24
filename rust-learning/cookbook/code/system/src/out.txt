@@ -1,0 +1,7 @@
+ls: 无法访问'oops': 没有那个文件或目录
+.:
+du-sort.rs
+executepython.rs
+githistory.rs
+main.rs
+out.txt

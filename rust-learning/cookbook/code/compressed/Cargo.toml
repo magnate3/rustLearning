@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+    "decompress",
+    "dir2ball",
+    "prefix",
+]

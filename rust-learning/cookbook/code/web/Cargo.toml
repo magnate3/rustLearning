@@ -1,0 +1,9 @@
+[workspace]
+
+members = [
+    "link",
+    "urls",
+    "media",
+    "client",
+    "dl"
+]

@@ -1,0 +1,9 @@
+[workspace]
+
+members = [
+    "vecsum",
+    "triangle",
+    "numbers",
+    "statistics",
+    "big",
+]

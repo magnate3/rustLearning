@@ -1,0 +1,29 @@
+error[E0425]: cannot find function `verify_with_own_key` in module `hmac`
+  --> hmac/src/main.rs:16:11
+   |
+16 |     hmac::verify_with_own_key(&key, message.as_bytes(), signature.as_ref())?;
+   |           ^^^^^^^^^^^^^^^^^^^ not found in `hmac`
+
+warning: use of deprecated item 'ring::hmac::SigningKey': Renamed to `hmac::Key`.
+  --> hmac/src/main.rs:12:15
+   |
+12 |     let key = hmac::SigningKey::new(&digest::SHA256, &key_value);
+   |               ^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+error[E0308]: mismatched types
+  --> hmac/src/main.rs:12:37
+   |
+12 |     let key = hmac::SigningKey::new(&digest::SHA256, &key_value);
+   |                                     ^^^^^^^^^^^^^^^ expected struct `ring::hmac::Algorithm`, found reference
+   |
+   = note: expected type `ring::hmac::Algorithm`
+              found type `&ring::digest::Algorithm`
+
+error: aborting due to 2 previous errors
+
+Some errors have detailed explanations: E0308, E0425.
+For more information about an error, try `rustc --explain E0308`.
+error: could not compile `hmac`.
+

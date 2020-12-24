@@ -1,0 +1,17 @@
+[package]
+name = "club"
+version = "0.1.0"
+authors = ["rdigua <digua@163.com>"]
+edition = "2018"
+repository = "https://github.com/rdigua/learningrust"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+search = { path = "search" }
+
+[workspace]
+
+members = [
+"search",
+]
